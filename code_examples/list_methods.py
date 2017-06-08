@@ -3,10 +3,12 @@ motorcycles = ['honda', 'yamaha', 'suzuki']
 motorcycles.insert(0, 'ducati')
 print(motorcycles) #['ducati', 'honda', 'yamaha', 'suzuki']
 
+
 #REMOVE USING DEL
 motorcycles = ['honda', 'yamaha', 'suzuki']
 del motorcycles[1]
 print(motorcycles) #['honda', 'suzuki']
+
 
 #REMOVE USING POP
 motorcycles = ['honda', 'yamaha', 'suzuki']
@@ -17,12 +19,21 @@ print(poppedMotorcycle) #suzuki
 firstOwned = motorcycles.pop(0)
 print(firstOwned) #honda
 
+
 #REMOVE USING REMOVE
 motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
 tooExpensive = 'ducati' #store the value 'ducati' to reuse
 motorcycles.remove(tooExpensive)
 print(motorcycles) #['honda', 'yamaha', 'suzuki']
 print("A" + tooExpensive.title() + " is too expensive for me.") #A Ducati is too expensive for me.
+
+
+#CLEAR ( Equivalent to del a[:] )
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+motorcycles.clear()
+print(motorcycles) #[]
+
+
 
 
 # SORT A LIST
@@ -43,6 +54,21 @@ cars.reverse()
 print(cars) #['subaru', 'toyota', 'audi', 'bmw']
 #== print(list(reversed(cars)))
 
+
+#EXTEND A LIST
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.extend(['lamborghini', 'chevrolet'])
+print(cars) #['bmw', 'audi', 'toyota', 'subaru', 'lamborghini', 'chevrolet']
+      
+
+#INDEX
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars.index('audi')) #1      
+
+
+#COUNT
+cars = ['bmw', 'audi', 'toyota', 'subaru', 'bmw']
+print(cars.count('bmw')) #2
 
 # USING RANGE MIN MAX SUM
 #generate a series of numbers
@@ -91,14 +117,12 @@ print(players[:4]) #['charles', 'martina', 'michael', 'florence']
 print(players[2:] #['michael', 'florence', 'eli']
 
 print(players[-3:] #['michael', 'florence', 'eli']
-
 #[start:end:step]
 
+      
 #COPY
-myFoods = ['pizza', 'falafel', 'carrot cake']
+my_foods = ['pizza', 'falafel', 'carrot cake']
 friend_foods = my_foods[:]
-#NOTE: THIS DOESN'T WORK friend_foods = my_foods
-      
-
-      
-      
+#NOTE: THIS DOESN'T WORK friend_foods = my_foods    
+#ANOTHER WAY      
+friend_foods = my_foods.copy()
