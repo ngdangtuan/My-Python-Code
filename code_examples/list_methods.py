@@ -126,3 +126,21 @@ friend_foods = my_foods[:]
 #NOTE: THIS DOESN'T WORK friend_foods = my_foods    
 #ANOTHER WAY      
 friend_foods = my_foods.copy()
+
+      
+# LIST COMPREHENSIONS
+      
+print([(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]) #[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+#it’s equivalent to
+combs = []
+for x in [1,2,3]:
+      for y in [3,1,4]:
+            if x != y:
+                  combs.append((x, y))
+
+# flatten a list using a listcomp with two 'for'
+vec = [[1,2,3], [4,5,6], [7,8,9]]
+[num for elem in vec for num in elem] #[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+from math import pi
+[str(round(pi, i)) for i in range(1, 6)] #3.1', '3.14', '3.142', '3.1416', '3.14159']
