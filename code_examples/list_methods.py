@@ -59,6 +59,7 @@ print(cars) #['subaru', 'toyota', 'audi', 'bmw']
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 cars.extend(['lamborghini', 'chevrolet'])
 print(cars) #['bmw', 'audi', 'toyota', 'subaru', 'lamborghini', 'chevrolet']
+#USE + : cars = cars + ['lamborghini', 'chevrolet']
       
 
 #INDEX
